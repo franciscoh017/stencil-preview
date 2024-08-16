@@ -9,6 +9,7 @@ www/
 # Ignore IDE and editor files
 .vscode/
 .idea/
+.stencil/
 *.sublime-project
 *.sublime-workspace
 
