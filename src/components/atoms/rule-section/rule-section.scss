@@ -1,0 +1,33 @@
+.rule-section{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section-title-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #dee2e6;
+}
+.section-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 0.5rem;
+  padding: 0.5rem 0.5rem
+}
+.section-title-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.section-title-text {
+  flex-grow: 1;
+}
+.section-title-text h2 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1rem;
+}

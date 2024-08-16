@@ -1,0 +1,35 @@
+.table-container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.thead {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.table-cell {
+  position: relative;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  min-width: 0.5rem;
+}
+
+.table-cell + .table-cell {
+  border-left: 1px solid #dee2e6;
+}
+
+.table-cell-bordered {
+  border-bottom: 1px solid #ddd; /* Adjust the color and style as needed */
+}
+
+.table-row:last-child .table-cell-bordered {
+  border-bottom: none; /* Remove border from last row's cells */
+}
+
+.table-row td:last-child .table-cell-bordered {
+border-bottom: none; /* Remove border from last cell in each row */
+}
