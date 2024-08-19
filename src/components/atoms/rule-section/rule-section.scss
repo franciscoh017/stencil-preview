@@ -19,10 +19,6 @@
   min-width: 0.5rem;
   padding: 0.5rem 0.5rem
 }
-.section-title-icon svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
 .section-title-text {
   flex-grow: 1;
 }
@@ -30,4 +26,9 @@
   font-weight: bold;
   margin: 0;
   font-size: 1rem;
+}
+
+.section-title-icon {
+  width: 1.25rem;
+  height: 1.25rem;
 }

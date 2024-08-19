@@ -18,7 +18,7 @@
   min-width: 0.5rem;
 }
 
-.table-cell + .table-cell {
+.table-cell + .table-cell:nth-child(2) {
   border-left: 1px solid #dee2e6;
 }
 

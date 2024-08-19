@@ -1,24 +1,20 @@
-import { Component, Prop, h } from "@stencil/core";
+import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "rule-container",
   styleUrl: "rule-container.scss",
-  shadow: true
+  shadow: true,
 })
 export class RuleContainer {
-
-  @Prop() heading: string = '';
-  @Prop() subtitle: string = '';
-
-
   render() {
     return (
       <section class="rule-container">
         <div class="rule-container__head">
-            <h1>{this.heading}</h1>
-            <small>{this.subtitle}</small>
+          <slot name="heading"></slot>
         </div>
-        <slot></slot>
+        <div class="rule-container__body">
+          <slot name="body"></slot>
+        </div>
       </section>
     );
   }

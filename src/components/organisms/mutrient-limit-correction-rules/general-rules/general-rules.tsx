@@ -166,24 +166,31 @@ export class GeneralRules {
 
   render() {
     return (
-      <rule-container
-        heading="General Rules"
-        subtitle="Configure general correction rules and priority"
-      >
-        <rule-section icon="gauge_low" heading="When Under Goal">
-          <rules-table
-            id="UnderGoalTable"
-            columns={columns}
-            data={this.getUnderGoalData}
-          />
-        </rule-section>
-        <rule-section icon="gauge_high" heading="When Over Goal">
-          <rules-table
-            id="OverGoalTable"
-            columns={columns}
-            data={this.getOverGoalData}
-          />
-        </rule-section>
+      <rule-container>
+        <div slot="heading">
+          <h4 style={{margin: '0'}}>General Rules</h4>
+          <small style={{color: '#6c757d'}}>Configure general correction rules and priority</small>
+        </div>
+        <div slot="body">
+          <div>
+            <rule-section icon="gauge_low" heading="When Under Goal">
+              <rules-table
+                id="UnderGoalTable"
+                columns={columns}
+                data={this.getUnderGoalData}
+              />
+            </rule-section>
+          </div>
+          <div style={{borderTop: '1px solid #dee2e6'}}>
+            <rule-section icon="gauge_high" heading="When Over Goal">
+              <rules-table
+                id="OverGoalTable"
+                columns={columns}
+                data={this.getOverGoalData}
+              />
+            </rule-section>
+          </div>
+        </div>
       </rule-container>
     );
   }

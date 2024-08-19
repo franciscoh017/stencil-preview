@@ -1,0 +1,54 @@
+.aqua-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  &__input {
+    padding: 0.5rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+  }
+
+  &.expanded {
+    max-width: 100%;
+  }
+
+  &.has-icon-left {
+    .aqua-input__input {
+      padding-left: 2.5rem;
+    }
+  }
+
+  &.has-icon-right {
+    .aqua-input__input {
+      padding-right: 2.5rem;
+    }
+  }
+
+  .aqua-input__icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    color: #000;
+
+    &--left {
+      right: auto;
+      left: 0.75rem;
+    }
+
+    &--right {
+      right: 0.75rem;
+      left: auto;
+    }
+  }
+}

@@ -10,16 +10,54 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
+  interface AquaButton {
+    'disabled': boolean;
+    'icon': string;
+    'iconSize': { width: number; height: number; };
+    'outlined': boolean;
+    'size': 'icon' | 'small' | 'medium' | 'large';
+    'type': string;
+  }
+  interface AquaIcon {
+    'height': number;
+    'icon': string;
+    'type': string;
+    'width': number;
+  }
+  interface AquaInput {
+    'disabled': boolean;
+    'expanded': boolean;
+    'iconLeft': string;
+    'iconRight': string;
+    'label': string;
+    'placeholder': string;
+    'required': boolean;
+    'type': 'text' | 'number';
+    'value': string;
+  }
+  interface AquaList {}
+  interface AquaListItem {
+    'selected': boolean;
+    'value': any;
+  }
+  interface AquaTooltip {
+    'position': "top" | "bottom" | "left" | "right";
+    'text': string;
+  }
   interface CheckBox {
     'label': string;
     'name': string;
     'selected': boolean;
   }
+  interface DietCourseRules {}
   interface GeneralRules {}
-  interface RuleContainer {
-    'heading': string;
-    'subtitle': string;
+  interface MealsList {
+    'meals': any[];
   }
+  interface NutrientExchangesList {
+    'nutrientExchanges': any[];
+  }
+  interface RuleContainer {}
   interface RuleSection {
     'heading': string;
     'icon': string;
@@ -33,16 +71,70 @@ export namespace Components {
 declare global {
 
 
+  interface HTMLAquaButtonElement extends Components.AquaButton, HTMLStencilElement {}
+  var HTMLAquaButtonElement: {
+    prototype: HTMLAquaButtonElement;
+    new (): HTMLAquaButtonElement;
+  };
+
+  interface HTMLAquaIconElement extends Components.AquaIcon, HTMLStencilElement {}
+  var HTMLAquaIconElement: {
+    prototype: HTMLAquaIconElement;
+    new (): HTMLAquaIconElement;
+  };
+
+  interface HTMLAquaInputElement extends Components.AquaInput, HTMLStencilElement {}
+  var HTMLAquaInputElement: {
+    prototype: HTMLAquaInputElement;
+    new (): HTMLAquaInputElement;
+  };
+
+  interface HTMLAquaListElement extends Components.AquaList, HTMLStencilElement {}
+  var HTMLAquaListElement: {
+    prototype: HTMLAquaListElement;
+    new (): HTMLAquaListElement;
+  };
+
+  interface HTMLAquaListItemElement extends Components.AquaListItem, HTMLStencilElement {}
+  var HTMLAquaListItemElement: {
+    prototype: HTMLAquaListItemElement;
+    new (): HTMLAquaListItemElement;
+  };
+
+  interface HTMLAquaTooltipElement extends Components.AquaTooltip, HTMLStencilElement {}
+  var HTMLAquaTooltipElement: {
+    prototype: HTMLAquaTooltipElement;
+    new (): HTMLAquaTooltipElement;
+  };
+
   interface HTMLCheckBoxElement extends Components.CheckBox, HTMLStencilElement {}
   var HTMLCheckBoxElement: {
     prototype: HTMLCheckBoxElement;
     new (): HTMLCheckBoxElement;
   };
 
+  interface HTMLDietCourseRulesElement extends Components.DietCourseRules, HTMLStencilElement {}
+  var HTMLDietCourseRulesElement: {
+    prototype: HTMLDietCourseRulesElement;
+    new (): HTMLDietCourseRulesElement;
+  };
+
   interface HTMLGeneralRulesElement extends Components.GeneralRules, HTMLStencilElement {}
   var HTMLGeneralRulesElement: {
     prototype: HTMLGeneralRulesElement;
     new (): HTMLGeneralRulesElement;
+  };
+
+  interface HTMLMealsListElement extends Components.MealsList, HTMLStencilElement {}
+  var HTMLMealsListElement: {
+    prototype: HTMLMealsListElement;
+    new (): HTMLMealsListElement;
+  };
+
+  interface HTMLNutrientExchangesListElement extends Components.NutrientExchangesList, HTMLStencilElement {}
+  var HTMLNutrientExchangesListElement: {
+    prototype: HTMLNutrientExchangesListElement;
+    new (): HTMLNutrientExchangesListElement;
   };
 
   interface HTMLRuleContainerElement extends Components.RuleContainer, HTMLStencilElement {}
@@ -63,8 +155,17 @@ declare global {
     new (): HTMLRulesTableElement;
   };
   interface HTMLElementTagNameMap {
+    'aqua-button': HTMLAquaButtonElement;
+    'aqua-icon': HTMLAquaIconElement;
+    'aqua-input': HTMLAquaInputElement;
+    'aqua-list': HTMLAquaListElement;
+    'aqua-list-item': HTMLAquaListItemElement;
+    'aqua-tooltip': HTMLAquaTooltipElement;
     'check-box': HTMLCheckBoxElement;
+    'diet-course-rules': HTMLDietCourseRulesElement;
     'general-rules': HTMLGeneralRulesElement;
+    'meals-list': HTMLMealsListElement;
+    'nutrient-exchanges-list': HTMLNutrientExchangesListElement;
     'rule-container': HTMLRuleContainerElement;
     'rule-section': HTMLRuleSectionElement;
     'rules-table': HTMLRulesTableElement;
@@ -72,17 +173,58 @@ declare global {
 }
 
 declare namespace LocalJSX {
+  interface AquaButton {
+    'disabled'?: boolean;
+    'icon'?: string;
+    'iconSize'?: { width: number; height: number; };
+    'onClick'?: (event: CustomEvent<any>) => void;
+    'outlined'?: boolean;
+    'size'?: 'icon' | 'small' | 'medium' | 'large';
+    'type'?: string;
+  }
+  interface AquaIcon {
+    'height'?: number;
+    'icon'?: string;
+    'type'?: string;
+    'width'?: number;
+  }
+  interface AquaInput {
+    'disabled'?: boolean;
+    'expanded'?: boolean;
+    'iconLeft'?: string;
+    'iconRight'?: string;
+    'label'?: string;
+    'onOnInput'?: (event: CustomEvent<any>) => void;
+    'placeholder'?: string;
+    'required'?: boolean;
+    'type'?: 'text' | 'number';
+    'value'?: string;
+  }
+  interface AquaList {}
+  interface AquaListItem {
+    'onOnItemSelected'?: (event: CustomEvent<any>) => void;
+    'selected'?: boolean;
+    'value'?: any;
+  }
+  interface AquaTooltip {
+    'position'?: "top" | "bottom" | "left" | "right";
+    'text'?: string;
+  }
   interface CheckBox {
     'label'?: string;
     'name'?: string;
     'onCheckedChange'?: (event: CustomEvent<boolean>) => void;
     'selected'?: boolean;
   }
+  interface DietCourseRules {}
   interface GeneralRules {}
-  interface RuleContainer {
-    'heading'?: string;
-    'subtitle'?: string;
+  interface MealsList {
+    'meals'?: any[];
   }
+  interface NutrientExchangesList {
+    'nutrientExchanges'?: any[];
+  }
+  interface RuleContainer {}
   interface RuleSection {
     'heading'?: string;
     'icon'?: string;
@@ -93,8 +235,17 @@ declare namespace LocalJSX {
   }
 
   interface IntrinsicElements {
+    'aqua-button': AquaButton;
+    'aqua-icon': AquaIcon;
+    'aqua-input': AquaInput;
+    'aqua-list': AquaList;
+    'aqua-list-item': AquaListItem;
+    'aqua-tooltip': AquaTooltip;
     'check-box': CheckBox;
+    'diet-course-rules': DietCourseRules;
     'general-rules': GeneralRules;
+    'meals-list': MealsList;
+    'nutrient-exchanges-list': NutrientExchangesList;
     'rule-container': RuleContainer;
     'rule-section': RuleSection;
     'rules-table': RulesTable;
@@ -107,8 +258,17 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
   export namespace JSX {
     interface IntrinsicElements {
+      'aqua-button': LocalJSX.AquaButton & JSXBase.HTMLAttributes<HTMLAquaButtonElement>;
+      'aqua-icon': LocalJSX.AquaIcon & JSXBase.HTMLAttributes<HTMLAquaIconElement>;
+      'aqua-input': LocalJSX.AquaInput & JSXBase.HTMLAttributes<HTMLAquaInputElement>;
+      'aqua-list': LocalJSX.AquaList & JSXBase.HTMLAttributes<HTMLAquaListElement>;
+      'aqua-list-item': LocalJSX.AquaListItem & JSXBase.HTMLAttributes<HTMLAquaListItemElement>;
+      'aqua-tooltip': LocalJSX.AquaTooltip & JSXBase.HTMLAttributes<HTMLAquaTooltipElement>;
       'check-box': LocalJSX.CheckBox & JSXBase.HTMLAttributes<HTMLCheckBoxElement>;
+      'diet-course-rules': LocalJSX.DietCourseRules & JSXBase.HTMLAttributes<HTMLDietCourseRulesElement>;
       'general-rules': LocalJSX.GeneralRules & JSXBase.HTMLAttributes<HTMLGeneralRulesElement>;
+      'meals-list': LocalJSX.MealsList & JSXBase.HTMLAttributes<HTMLMealsListElement>;
+      'nutrient-exchanges-list': LocalJSX.NutrientExchangesList & JSXBase.HTMLAttributes<HTMLNutrientExchangesListElement>;
       'rule-container': LocalJSX.RuleContainer & JSXBase.HTMLAttributes<HTMLRuleContainerElement>;
       'rule-section': LocalJSX.RuleSection & JSXBase.HTMLAttributes<HTMLRuleSectionElement>;
       'rules-table': LocalJSX.RulesTable & JSXBase.HTMLAttributes<HTMLRulesTableElement>;
