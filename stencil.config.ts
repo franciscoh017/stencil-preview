@@ -3,6 +3,7 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'stencil-preview',
+  globalStyle: 'src/global/variables.scss',
   plugins: [
     sass()
   ],

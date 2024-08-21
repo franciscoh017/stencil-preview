@@ -19,80 +19,20 @@
     </style>
   </head>
   <body>
-    <div></div>
-    <div style="padding: 0 1rem">
-      <h3>Nutrient Limit Correction Rules</h3>
-      <div style="display: flex; gap: 0.5rem; width: 100%">
-        <general-rules style="min-width: 25rem"></general-rules>
-        <div style="display: flex; width: 100%">
-          <rule-container style="min-width: 20%">
-            <div slot="heading">
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                "
-              >
-                <h4 style="margin: 0">Meals</h4>
-                <aqua-tooltip
-                  text="Meals marked with “Use in Goal” appear here"
-                >
-                  <aqua-icon icon="circle_info" type="primary"></aqua-icon>
-                </aqua-tooltip>
-              </div>
-            </div>
-            <div slot="body" style="min-height: 40rem">
-              <meals-list></meals-list>
-            </div>
-          </rule-container>
-          <rule-container style="min-width: 20%; margin-left: -1px">
-            <div
-              slot="heading"
-              style="display: flex; flex-direction: column; gap: 0.25rem"
-            >
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                "
-              >
-                <h4 style="margin: 0">Nutrient & Exchanges</h4>
-                <aqua-tooltip
-                  text="Nutrients/Exchanges marked with “Use in Fixing” appear here"
-                >
-                  <aqua-icon icon="circle_info" type="primary"></aqua-icon>
-                </aqua-tooltip>
-              </div>
-              <aqua-input
-                expanded
-                icon-left="magnifier"
-                placeholder="Search"
-              ></aqua-input>
-            </div>
-            <div slot="body" style="min-height: 37.5rem">
-              <nutrient-exchanges-list></nutrient-exchanges-list>
-            </div>
-          </rule-container>
-          <rule-container style="flex: 1; flex-grow: 1; margin-left: -1px">
-            <div slot="heading">
-              <h4 style="margin: 0">Diet Course Rules</h4>
-            </div>
-            <div
-              slot="body"
-              style="
-                min-height: 40rem;
-                min-width: 50%;
-                background-color: #f1f1f1;
-              "
-            >
-              <diet-course-rules></diet-course-rules>
-            </div>
-          </rule-container>
-        </div>
-      </div>
-      ,
+    <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center; max-width: 10rem;">
+      <aqua-button type="primary" text="Button"></aqua-button>
+      <aqua-button type="primary" text="Button" size="small"></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info"></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info" icon-position="right" full-width></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info" icon-position="right" full-width justified></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right" full-width></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right" full-width justified></aqua-button>
+      <aqua-button type="primary" icon-only size="medium" icon="circle_info" icon-position="right" icon-size="24"></aqua-button>
+      <aqua-button type="primary" icon-only size="small" icon="circle_info" icon-position="right"></aqua-button>
     </div>
   </body>
 </html>

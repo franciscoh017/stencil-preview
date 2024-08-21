@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stencil-preview.esm.js"></script>
+    <script nomodule src="/build/stencil-preview.js"></script>
+    
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+      *, html, body {
+        font-family: Nunito, sans-serif !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div style="padding: 0 1rem">
+      <h3>Nutrient Limit Correction Rules</h3>
+      <div style="display: flex; gap: 0.5rem; width: 100%">
+        <general-rules style="min-width: 25rem"></general-rules>
+        <div style="display: flex; width: 100%">
+          <rule-container style="min-width: 20%">
+            <div slot="heading">
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                "
+              >
+                <h4 style="margin: 0">Meals</h4>
+                <aqua-tooltip
+                  text="Meals marked with “Use in Goal” appear here"
+                >
+                  <aqua-icon icon="circle_info" type="primary"></aqua-icon>
+                </aqua-tooltip>
+              </div>
+            </div>
+            <div slot="body" style="min-height: 40rem">
+              <meals-list></meals-list>
+            </div>
+          </rule-container>
+          <rule-container style="min-width: 20%; margin-left: -1px">
+            <div
+              slot="heading"
+              style="display: flex; flex-direction: column; gap: 0.25rem"
+            >
+              <div
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                "
+              >
+                <h4 style="margin: 0">Nutrient & Exchanges</h4>
+                <aqua-tooltip
+                  text="Nutrients/Exchanges marked with “Use in Fixing” appear here"
+                >
+                  <aqua-icon icon="circle_info" type="primary"></aqua-icon>
+                </aqua-tooltip>
+              </div>
+              <aqua-input
+                expanded
+                icon-left="magnifier"
+                placeholder="Search"
+              ></aqua-input>
+            </div>
+            <div slot="body" style="min-height: 37.5rem">
+              <nutrient-exchanges-list></nutrient-exchanges-list>
+            </div>
+          </rule-container>
+          <rule-container style="flex: 1; flex-grow: 1; margin-left: -1px">
+            <div slot="heading">
+              <h4 style="margin: 0">Diet Course Rules</h4>
+            </div>
+            <div
+              slot="body"
+              style="
+                min-height: 40rem;
+                min-width: 50%;
+                background-color: #f1f1f1;
+              "
+            >
+              <diet-course-rules></diet-course-rules>
+            </div>
+          </rule-container>
+        </div>
+      </div>
+      ,
+    </div>
+  </body>
+</html>

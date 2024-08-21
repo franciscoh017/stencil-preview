@@ -12,11 +12,17 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 export namespace Components {
   interface AquaButton {
     'disabled': boolean;
+    'fullWidth': boolean;
     'icon': string;
-    'iconSize': { width: number; height: number; };
+    'iconOnly': boolean;
+    'iconPosition': 'left' | 'right';
+    'iconSize': number;
+    'justified': boolean;
+    'loading': boolean;
     'outlined': boolean;
-    'size': 'icon' | 'small' | 'medium' | 'large';
-    'type': string;
+    'size': 'small' | 'medium' | 'large';
+    'text': string;
+    'type': 'default' | 'primary' | 'info' | 'success' | 'warning' | 'danger';
   }
   interface AquaIcon {
     'height': number;
@@ -175,12 +181,17 @@ declare global {
 declare namespace LocalJSX {
   interface AquaButton {
     'disabled'?: boolean;
+    'fullWidth'?: boolean;
     'icon'?: string;
-    'iconSize'?: { width: number; height: number; };
-    'onClick'?: (event: CustomEvent<any>) => void;
+    'iconOnly'?: boolean;
+    'iconPosition'?: 'left' | 'right';
+    'iconSize'?: number;
+    'justified'?: boolean;
+    'loading'?: boolean;
     'outlined'?: boolean;
-    'size'?: 'icon' | 'small' | 'medium' | 'large';
-    'type'?: string;
+    'size'?: 'small' | 'medium' | 'large';
+    'text'?: string;
+    'type'?: 'default' | 'primary' | 'info' | 'success' | 'warning' | 'danger';
   }
   interface AquaIcon {
     'height'?: number;

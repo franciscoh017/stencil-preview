@@ -102,9 +102,9 @@ export class DietCourseRules {
                 <span>{row.max}</span>
               </div>
               <div style={buttonsStyles}>
-                <aqua-button icon="arrow_up" size="icon" disabled={isDisabledUp()} outlined onClick={() => onSort(row, 'up')}></aqua-button>
-                <aqua-button icon="arrow_down" size="icon" disabled={isDisabledDown()} outlined onClick={() => onSort(row, 'down')}></aqua-button>
-                <aqua-button icon="trash_can" type="danger" size="icon" outlined onClick={() => onDelete(index)}></aqua-button>
+                <aqua-button icon="arrow_up" con-only size="small" disabled={isDisabledUp()} outlined onClick={() => onSort(row, 'up')}></aqua-button>
+                <aqua-button icon="arrow_down" con-only size="small" disabled={isDisabledDown()} outlined onClick={() => onSort(row, 'down')}></aqua-button>
+                <aqua-button icon="trash_can" type="danger" con-only size="small" outlined onClick={() => onDelete(index)}></aqua-button>
               </div>
             </div>
           );
@@ -168,9 +168,9 @@ export class DietCourseRules {
                 <span>{row.max}</span>
               </div>
               <div style={buttonsStyles}>
-                <aqua-button icon="arrow_up" size="icon" disabled={isDisabledUp()} outlined onClick={() => onSort(row, 'up')}></aqua-button>
-                <aqua-button icon="arrow_down" size="icon" disabled={isDisabledDown()} outlined onClick={() => onSort(row, 'down')}></aqua-button>
-                <aqua-button icon="trash_can" type="danger" size="icon" outlined onClick={() => onDelete(index)}></aqua-button>
+                <aqua-button icon="arrow_up" icon-only size="small" disabled={isDisabledUp()} outlined onClick={() => onSort(row, 'up')}></aqua-button>
+                <aqua-button icon="arrow_down" icon-only size="small" disabled={isDisabledDown()} outlined onClick={() => onSort(row, 'down')}></aqua-button>
+                <aqua-button icon="trash_can" type="danger" icon-only size="small" outlined onClick={() => onDelete(index)}></aqua-button>
               </div>
             </div>
           );
