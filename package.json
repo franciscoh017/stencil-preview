@@ -27,5 +27,8 @@
     "@stencil/sass": "^1.1.1"
   },
   "license": "MIT",
-  "keywords": []
+  "keywords": [],
+  "dependencies": {
+    "lodash.get": "^4.4.2"
+  }
 }

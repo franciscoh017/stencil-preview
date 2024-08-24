@@ -1,5 +1,5 @@
 //Import global variables
-@import '../../../global/variables.scss';
+@import '../../../global/_variables.scss';
 
 $radius: 0.5rem;
 
@@ -73,6 +73,15 @@ $radius: 0.5rem;
   
       &:hover {
         background-color: $primary-hover;
+      }
+    }
+
+    &.is-danger {
+      background-color: $danger;
+      color: $white;
+  
+      &:hover {
+        background-color: $danger-hover;
       }
     }
   }

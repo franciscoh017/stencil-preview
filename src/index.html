@@ -1,24 +1,17 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
-    />
-    <title>Stencil Component Starter</title>
 
-    <script type="module" src="/build/stencil-preview.esm.js"></script>
-    <script nomodule src="/build/stencil-preview.js"></script>
-    
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-      *, html, body {
-        font-family: Nunito, sans-serif !important;
-      }
-    </style>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/stencil-preview.esm.js"></script>
+  <script nomodule src="/build/stencil-preview.js"></script>
+</head>
+
+<body>
+  <div style="display: flex; gap: 2rem; flex-direction: row; align-items: center;">
     <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center; max-width: 10rem;">
       <aqua-button type="primary" text="Button"></aqua-button>
       <aqua-button type="primary" text="Button" size="small"></aqua-button>
@@ -26,13 +19,62 @@
       <aqua-button type="primary" text="Button" icon="circle_info" full-width></aqua-button>
       <aqua-button type="primary" text="Button" icon="circle_info" full-width justified></aqua-button>
       <aqua-button type="primary" text="Button" icon="circle_info" icon-position="right" full-width></aqua-button>
-      <aqua-button type="primary" text="Button" icon="circle_info" icon-position="right" full-width justified></aqua-button>
+      <aqua-button type="primary" text="Button" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
       <aqua-button type="primary" text="Button" size="small" icon="circle_info" full-width></aqua-button>
       <aqua-button type="primary" text="Button" size="small" icon="circle_info" full-width justified></aqua-button>
-      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right" full-width></aqua-button>
-      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right" full-width justified></aqua-button>
-      <aqua-button type="primary" icon-only size="medium" icon="circle_info" icon-position="right" icon-size="24"></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right"
+        full-width></aqua-button>
+      <aqua-button type="primary" text="Button" size="small" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
+      <aqua-button type="primary" icon-only size="medium" icon="circle_info" icon-position="right"
+        icon-size="24"></aqua-button>
       <aqua-button type="primary" icon-only size="small" icon="circle_info" icon-position="right"></aqua-button>
     </div>
-  </body>
+    <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center; max-width: 10rem;">
+      <aqua-button type="default" text="Button"></aqua-button>
+      <aqua-button type="default" text="Button" size="small"></aqua-button>
+      <aqua-button type="default" text="Button" icon="circle_info"></aqua-button>
+      <aqua-button type="default" text="Button" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="default" text="Button" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="default" text="Button" icon="circle_info" icon-position="right" full-width></aqua-button>
+      <aqua-button type="default" text="Button" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
+      <aqua-button type="default" text="Button" size="small" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="default" text="Button" size="small" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="default" text="Button" size="small" icon="circle_info" icon-position="right"
+        full-width></aqua-button>
+      <aqua-button type="default" text="Button" size="small" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
+      <aqua-button type="default" icon-only size="medium" icon="circle_info" icon-position="right"
+        icon-size="24"></aqua-button>
+      <aqua-button type="default" icon-only size="small" icon="circle_info" icon-position="right"></aqua-button>
+    </div>
+    <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center; max-width: 10rem;">
+      <aqua-button type="danger" text="Button"></aqua-button>
+      <aqua-button type="danger" text="Button" size="small"></aqua-button>
+      <aqua-button type="danger" text="Button" icon="circle_info"></aqua-button>
+      <aqua-button type="danger" text="Button" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="danger" text="Button" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="danger" text="Button" icon="circle_info" icon-position="right" full-width></aqua-button>
+      <aqua-button type="danger" text="Button" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
+      <aqua-button type="danger" text="Button" size="small" icon="circle_info" full-width></aqua-button>
+      <aqua-button type="danger" text="Button" size="small" icon="circle_info" full-width justified></aqua-button>
+      <aqua-button type="danger" text="Button" size="small" icon="circle_info" icon-position="right"
+        full-width></aqua-button>
+      <aqua-button type="danger" text="Button" size="small" icon="circle_info" icon-position="right" full-width
+        justified></aqua-button>
+      <aqua-button type="danger" icon-only size="medium" icon="circle_info" icon-position="right"
+        icon-size="24"></aqua-button>
+      <aqua-button type="danger" icon-only size="small" icon="circle_info" icon-position="right"></aqua-button>
+    </div>
+    <div style="display: flex; gap: 1rem; flex-direction: column; align-items: center; max-width: 10rem;">
+      <aqua-input label="label"></aqua-input>
+    </div>
+  </div>
+
+  <aqua-table></aqua-table>
+</body>
+
 </html>

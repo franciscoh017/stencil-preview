@@ -1,3 +1,6 @@
+//Import global variables
+@import '../../../global/_variables.scss';
+
 .aqua-input {
   position: relative;
   display: flex;
@@ -5,6 +8,10 @@
   gap: 0.5rem;
   width: 100%;
   max-width: 300px;
+
+  &:focus {
+
+  }
 
   &__label {
     font-size: 1rem;
